@@ -52,8 +52,7 @@ public class VerifiableTransactionReferenceNumberGenerator implements RandomNumb
         return () -> {
             String nanoTime = String.valueOf(System.nanoTime());
             String secondHalfRandom = new StringBuilder(
-                    String.valueOf(nanoTime).substring(nanoTime.length() - 8, nanoTime.length() - 2)).append("00")
-                            .toString();
+                    String.valueOf(nanoTime).substring(nanoTime.length() - 8, nanoTime.length())).toString();
             return secondHalfRandom;
         };
     }
