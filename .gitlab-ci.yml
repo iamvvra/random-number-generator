@@ -1,0 +1,23 @@
+image: openjdk:8
+
+stages:
+  - test
+  - build
+  - deploy
+
+before_script:
+  - chmod +x mvnw
+
+unit-test:
+  stage: test
+  script:
+    - mvn clean test -U -B
+
+build:
+  stage: build
+  script: ./mvnw package -U -B
+  only:
+    - master
+  artifacts:
+    paths:
+      - target/random-number-generator-1.0.0-SNAPSHOT.jar

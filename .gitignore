@@ -1,9 +1,33 @@
 # Ignore Gradle project-specific cache directory
 .gradle
 
+#VSCODE
+.project
+.classpath
+
 /bin/
 /build/
 /.vscode/
+/.settings/
 
 # Ignore Gradle build output directory
 build
+target/
+.gradle
+/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# Eclipse
+.project
+
+
+# JDT-specific (Eclipse Java Development Tools)     
+.classpath
